@@ -21,27 +21,27 @@ const HeroSlider = () => {
   };
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-gray-100">
       <button 
         onClick={prevSlide}
-        className="absolute top-[20%] left-0 z-10 px-[1vw] py-[5vh] bg-[#ffffff4f] text-[#0000007b] font-semibold text-[18px] cursor-pointer hover:bg-[#ffffff80]"
+        className="absolute top-[10%] md:top-[20%] left-0 z-10 px-2 md:px-[1vw] py-8 md:py-[5vh] bg-[#ffffff4f] text-[#0000007b] font-semibold text-[18px] cursor-pointer hover:bg-[#ffffff80] transition-colors"
       >
         &#129144;
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute top-[20%] right-0 z-10 px-[1vw] py-[5vh] bg-[#ffffff4f] text-[#0000007b] font-semibold text-[18px] cursor-pointer hover:bg-[#ffffff80]"
+        className="absolute top-[10%] md:top-[20%] right-0 z-10 px-2 md:px-[1vw] py-8 md:py-[5vh] bg-[#ffffff4f] text-[#0000007b] font-semibold text-[18px] cursor-pointer hover:bg-[#ffffff80] transition-colors"
       >
         &#129146;
       </button>
       
-      <ul className="flex overflow-y-hidden">
+      <ul className="flex overflow-y-hidden min-h-[200px] md:min-h-[400px]">
         {images.map((img, idx) => (
           <img 
             key={idx}
             src={img} 
             alt={`Banner ${idx}`}
-            className={`max-w-full [mask-image:linear-gradient(to_bottom,#000000_50%,transparent_100%)] transition-opacity duration-500 ${
+            className={`w-full h-auto object-cover md:object-contain [mask-image:linear-gradient(to_bottom,#000000_60%,transparent_100%)] md:[mask-image:linear-gradient(to_bottom,#000000_80%,transparent_100%)] transition-opacity duration-500 ${
               idx === currentIdx ? 'block' : 'hidden'
             }`}
           />

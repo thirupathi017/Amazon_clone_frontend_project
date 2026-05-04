@@ -14,7 +14,7 @@ const CategoryBox = ({ title, image, link }) => {
 
 const CategoryGrid = ({ categories }) => {
   return (
-    <div className="flex flex-wrap gap-y-5 justify-between mx-[30px] my-5">
+    <div className="flex flex-wrap gap-y-4 md:gap-y-5 justify-between mx-4 md:mx-[30px] my-5">
       {categories.map((cat, idx) => (
         <CategoryBox key={idx} {...cat} />
       ))}
